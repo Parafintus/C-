@@ -14,7 +14,7 @@ int thirdDigit = ThirdDigit(number);
 
 if (number < 99)
     Console.WriteLine("Третьей цифры нет");
-else Console.WriteLine(thirdDigit);
+else Console.WriteLine($"{number} -> {thirdDigit}");
 
 
 int ThirdDigit(int num) // num = number

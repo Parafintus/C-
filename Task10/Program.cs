@@ -22,6 +22,6 @@ else Console.WriteLine("Ошибка ввода");
 
 int SecondDigit(int num) // num = number
 {
-    return secondDigit = (num % 100) / 10;
+    return secondDigit = num / 10 % 10;
 }
 
