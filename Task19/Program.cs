@@ -12,7 +12,8 @@
 
 Console.WriteLine("Введите число");
 int number = Convert.ToInt32(Console.ReadLine());
-if (Palindrome(number)) Console.WriteLine("ДА");
+if (number < 0) Console.WriteLine("Ошибка ввода");
+else if (Palindrome(number)) Console.WriteLine("ДА");
 else Console.WriteLine("НЕТ");
 
 bool Palindrome(int num)

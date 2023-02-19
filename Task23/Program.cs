@@ -7,11 +7,11 @@
 // 3 -> 1, 8, 27
 // 5 -> 1, 8, 27, 64, 125
 
-Console.Write("Введите число: ");
+Console.Write("Введите натуральное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-Square(number);
-
-void Square(int num)
+Cube(number);
+if (number < 0) Console.WriteLine("Ошибка ввода");
+void Cube(int num)
 {
     int index = 1;
     while (index <= num)
