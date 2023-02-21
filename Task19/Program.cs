@@ -27,13 +27,6 @@ bool Palindrome(int num)
         numberRevers = numberRevers * 10 + value;
         numberTemp /= 10;
     }
-    if (numberRevers == num)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+   return numberRevers == num;
 }
 
