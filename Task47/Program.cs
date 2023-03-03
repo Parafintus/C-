@@ -12,6 +12,11 @@ Console.WriteLine("Укажите количество строк в масси�
 int row = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Укажите количество столбцов в массиве");
 int column = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Укажите количество символов после запятой");
+int count = Convert.ToInt32(Console.ReadLine());
+if (count < 0 || row < 1 || column < 0) Console.WriteLine("Ошибка ввода");
+else
+{
 
 double[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
 {
@@ -22,7 +27,7 @@ double[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
     {
         for (int j = 0; j < matrix.GetLength(1); j++) // columns
         {
-            matrix[i, j] = Math.Round((rnd.NextDouble() * (max - min) + min), 1, MidpointRounding.ToZero);
+            matrix[i, j] = Math.Round((rnd.NextDouble() * (max - min) + min), count, MidpointRounding.ToZero);
         }
     }
     return matrix;
@@ -45,3 +50,4 @@ void PrintMatrix(double[,] matrix)
 
 double[,] array2d = CreateMatrixRndInt(row, column, -100, 100);
 PrintMatrix(array2d);
+}
