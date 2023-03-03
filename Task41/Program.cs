@@ -9,7 +9,7 @@
 Console.WriteLine("Введите размер массива");
 int number = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введие элемент");
-int[] CreateArrayRndInt(int size)
+int[] CreateArrayInt(int size)
 {
     int[] arr = new int[size];
     for (int i = 0; i < arr.Length; i++)
@@ -36,12 +36,12 @@ int NaturalNumber(int[] arr)
     int count = 0;
     for (int i = 0; i < arr.Length; i++)
     {
-        if (arr[i] < 0) count++;
+        if (arr[i] > 0) count++;
     }
     return count;
 }
 
-int[] array = CreateArrayRndInt(number);
+int[] array = CreateArrayInt(number);
 PrintArray(array);
 Console.WriteLine();
 int naturalNumber = NaturalNumber(array);
