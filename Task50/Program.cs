@@ -52,11 +52,12 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-if (row < 1 || column < 1 || rowIndex < 0 || columnIndex < 0 ) Console.WriteLine("Ошибка ввода");
-else if (rowIndex > row-1 || columnIndex > column-1) Console.WriteLine("Такого элемента в массиве нет");
-else {
-int[,] array2d = CreateMatrixRndInt(row, column, -10, 10);
-PrintMatrix(array2d);
-Console.WriteLine();
-Console.WriteLine($"Значение на заданной позиции элемента [{rowIndex},{columnIndex}] => {array2d[rowIndex, columnIndex]}");
+if (row < 1 || column < 1 || rowIndex < 0 || columnIndex < 0) Console.WriteLine("Ошибка ввода");
+else if (rowIndex > row - 1 || columnIndex > column - 1) Console.WriteLine("Такого элемента в массиве нет");
+else
+{
+    int[,] array2d = CreateMatrixRndInt(row, column, -10, 10);
+    PrintMatrix(array2d);
+    Console.WriteLine();
+    Console.WriteLine($"Значение на заданной позиции элемента [{rowIndex},{columnIndex}] => {array2d[rowIndex, columnIndex]}");
 }

@@ -15,10 +15,8 @@ int column = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Укажите количество символов после запятой");
 int count = Convert.ToInt32(Console.ReadLine());
 if (count < 0 || row < 1 || column < 0) Console.WriteLine("Ошибка ввода");
-else
-{
 
-double[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
+double[,] CreateMatrixRndDouble(int rows, int columns, int min, int max)
 {
     double[,] matrix = new double[rows, columns]; // 0 ,  1
     Random rnd = new Random();
@@ -32,7 +30,6 @@ double[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
     }
     return matrix;
 }
-
 
 void PrintMatrix(double[,] matrix)
 {
@@ -48,6 +45,5 @@ void PrintMatrix(double[,] matrix)
     }
 }
 
-double[,] array2d = CreateMatrixRndInt(row, column, -100, 100);
+double[,] array2d = CreateMatrixRndDouble(row, column, -100, 100);
 PrintMatrix(array2d);
-}
