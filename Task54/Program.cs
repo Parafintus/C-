@@ -37,7 +37,7 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-void OrderArrayLines(int[,] matrix)
+void OrderMatrixLines(int[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
@@ -64,6 +64,6 @@ int[,] array2d = CreateMatrixRndInt(row, column, 0, 10);
 PrintMatrix(array2d);
 Console.WriteLine();
 Console.WriteLine("Измененная матрица:");
-OrderArrayLines(array2d);
+OrderMatrixLines(array2d);
 PrintMatrix(array2d);
 

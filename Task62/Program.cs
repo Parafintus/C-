@@ -28,9 +28,9 @@ while (temp <= matrix.GetLength(0) * matrix.GetLength(1))
     i--;
 }
 
-WriteArray(matrix);
+PrintMatrix(matrix);
 
-void WriteArray (int[,] array)
+void PrintMatrix (int[,] array)
 {
   for (int i = 0; i < array.GetLength(0); i++)
   {
